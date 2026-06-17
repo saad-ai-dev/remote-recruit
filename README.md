@@ -100,6 +100,10 @@ The app has been tuned for:
 
 When changing layout behavior, verify the app at these widths before shipping.
 
+## Lighthouse Testing
+
+For performance testing, open the production URL in an incognito window and run Lighthouse from Chrome DevTools. Incognito helps avoid cached browser data, extensions, IndexedDB, or previous local storage data affecting the score.
+
 ## Known Issues / Limitations
 
 - The app uses mock/static data for applicants, pricing, categories, and common questions.

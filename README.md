@@ -59,6 +59,8 @@ Serves the production build locally with Vite preview.
 - `/invoice` - Job applicants dashboard placeholder route
 - `/invoices` - Job applicants dashboard placeholder route
 
+On the landing page, clicking the `Sign In` link opens the `/application` page.
+
 Routing is currently handled in `src/App.jsx` by checking `window.location.pathname`.
 
 ## Project Structure

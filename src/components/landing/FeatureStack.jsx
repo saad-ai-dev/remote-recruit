@@ -2,7 +2,7 @@ import { ASSETS, features } from "../../constants/content";
 
 export function FeatureStack() {
   return (
-    <section className="container-page -mt-2 space-y-14 pb-16 pt-10 sm:space-y-20 sm:pt-16 lg:space-y-28 lg:pb-28">
+    <section className="below-fold-section container-page -mt-2 space-y-14 pb-16 pt-10 sm:space-y-20 sm:pt-16 lg:space-y-28 lg:pb-28">
       {features.map((feature) => (
         <FeatureRow key={feature.title} {...feature} />
       ))}
@@ -31,6 +31,8 @@ function FeatureRow({ eyebrow, title, body, image, imageAlt, align }) {
         <img
           src={`${ASSETS}${image}`}
           alt={imageAlt}
+          loading="lazy"
+          decoding="async"
           className="relative mx-auto w-full drop-shadow-[0_28px_55px_rgba(30,62,133,0.16)]"
         />
       </div>

@@ -1,11 +1,15 @@
 import { ASSETS } from "../../constants/content";
 
-export function Logo({ compact = false }) {
+export function Logo({ compact = false, loading = "eager" }) {
   return (
     <a href="#" className="inline-flex items-center gap-2 text-white">
       <img
         src={`${ASSETS}remote-recruit-mark.svg`}
         alt=""
+        decoding="async"
+        loading={loading}
+        width={compact ? 36 : 48}
+        height={compact ? 32 : 44}
         className={compact ? "h-8 w-9" : "h-7 w-8 sm:h-11 sm:w-12"}
       />
       <span className="leading-none">
@@ -20,12 +24,16 @@ export function Logo({ compact = false }) {
   );
 }
 
-export function DashboardLogo({ compact = false }) {
+export function DashboardLogo({ compact = false, loading = "eager" }) {
   return (
     <a href="/" className="inline-flex items-center gap-2 text-white">
       <img
         src={`${ASSETS}remote-recruit-mark.svg`}
         alt=""
+        decoding="async"
+        loading={loading}
+        width={compact ? 36 : 94}
+        height={compact ? 32 : 78}
         className={compact ? "h-8 w-9" : "h-[78px] w-[94px]"}
       />
       {compact ? (

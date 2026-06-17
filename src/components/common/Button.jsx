@@ -11,6 +11,7 @@ export function Button({
 
   return (
     <button
+      type="button"
       className={`inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-extrabold transition ${styles} ${className}`}
       {...props}
     >

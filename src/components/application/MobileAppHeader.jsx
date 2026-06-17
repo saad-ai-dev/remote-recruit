@@ -15,10 +15,14 @@ export function MobileAppHeader() {
       <div className="flex items-center justify-between">
         <DashboardLogo compact />
         <div className="flex items-center gap-2">
-          <button className="h-7 whitespace-nowrap rounded-md bg-[#FFC315] px-2 text-[10px] font-extrabold text-brand-800">
+          <button
+            type="button"
+            className="h-7 whitespace-nowrap rounded-md bg-[#FFC315] px-2 text-[10px] font-extrabold text-brand-800"
+          >
             Get Premium
           </button>
           <button
+            type="button"
             className="grid h-7 w-7 place-items-center"
             aria-label="Open menu"
           >

@@ -17,6 +17,7 @@ export function CategoryTabs() {
 function CategoryCard({ label, count, active, icon }) {
   return (
     <button
+      type="button"
       className={`flex min-h-[88px] min-w-[236px] items-center gap-3 rounded-md border px-4 text-left transition sm:min-h-[100px] sm:min-w-0 lg:gap-3 lg:px-4 ${
         active
           ? "border-[#FFC315] bg-ink text-white shadow-card"
@@ -28,11 +29,9 @@ function CategoryCard({ label, count, active, icon }) {
         className={`h-6 w-6 shrink-0 sm:h-7 sm:w-7 ${active ? "text-white" : "text-black/55"}`}
       />
       <span>
-        {active ? (
-          <span className="block whitespace-nowrap text-base font-extrabold">
-            {label}
-          </span>
-        ) : null}
+        <span className="block whitespace-nowrap text-base font-extrabold">
+          {label}
+        </span>
         <span
           className={`block whitespace-nowrap text-sm font-bold ${
             active ? "text-[#18E046]" : "text-slate-400"

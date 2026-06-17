@@ -13,6 +13,7 @@ export function JobPostBanner() {
         </h2>
       </div>
       <button
+        type="button"
         className="grid h-8 w-8 shrink-0 place-items-center text-brand-400 sm:h-10 sm:w-10"
         aria-label="Edit job post"
       >

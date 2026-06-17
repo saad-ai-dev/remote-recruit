@@ -4,7 +4,7 @@ import { CheckIcon } from "../common/Icons";
 
 export function PricingSection() {
   return (
-    <section className="relative overflow-hidden bg-white pt-10">
+    <section className="below-fold-section relative overflow-hidden bg-white pt-10">
       <div className="absolute bottom-0 left-0 right-0 h-[46%] bg-brand-800" />
       <div className="absolute bottom-[33%] left-0 right-0 h-32 bg-white [clip-path:ellipse(76%_52%_at_52%_0%)]" />
       <div className="container-page relative z-10 pb-20">

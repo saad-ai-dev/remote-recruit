@@ -9,6 +9,10 @@ export function DashboardSidebar() {
           <img
             src={`${ASSETS}remote-recruit-mark.svg`}
             alt=""
+            decoding="async"
+            loading="eager"
+            width="82"
+            height="68"
             className="h-[68px] w-[82px]"
           />
           <p className="mt-1 text-lg font-bold">RemoteRecruit</p>
@@ -46,7 +50,10 @@ export function DashboardSidebar() {
             <h3 className="pr-12 text-xl font-extrabold leading-tight">
               Why You Should Try Premium
             </h3>
-            <button className="mt-5 inline-flex w-full items-center gap-3 rounded-full bg-brand-800/70 py-2 pl-2 pr-4 text-base font-semibold">
+            <button
+              type="button"
+              className="mt-5 inline-flex w-full items-center gap-3 rounded-full bg-brand-800/70 py-2 pl-2 pr-4 text-base font-semibold"
+            >
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white text-[#FFC315]">
                 ▶
               </span>
@@ -58,7 +65,10 @@ export function DashboardSidebar() {
             <h3 className="text-xl font-extrabold">Basic</h3>
             <UsageMeter label="Free Messages" />
             <UsageMeter label="Free Invites" />
-            <button className="mt-5 w-full rounded-xl bg-[#FFC315] py-3 text-sm font-extrabold text-black">
+            <button
+              type="button"
+              className="mt-5 w-full rounded-xl bg-[#FFC315] py-3 text-sm font-extrabold text-black"
+            >
               Upgrade
             </button>
             <a
@@ -72,7 +82,11 @@ export function DashboardSidebar() {
           <div className="sidebar-user-card flex items-center gap-3 px-4">
             <img
               src={`${ASSETS}bungie-avatar.png`}
-              alt=""
+              alt="Bungie profile"
+              decoding="async"
+              loading="lazy"
+              width="40"
+              height="40"
               className="h-10 w-10 rounded-full object-cover"
             />
             <div className="min-w-0 flex-1">

@@ -3,7 +3,7 @@ import { Button } from "../common/Button";
 
 export function FaqSection() {
   return (
-    <section className="container-page py-20 sm:py-28">
+    <section className="below-fold-section container-page py-20 sm:py-28">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
           Common Questions

@@ -2,14 +2,14 @@
 
 RemoteRecruit is a Vite + React single-page frontend for a remote hiring platform. It includes a public marketing landing page and a job applicants dashboard-style view.
 
-## Tech Stack
+## Framework / Libraries Used
 
 - React 18
 - Vite
 - Tailwind CSS
 - PostCSS / Autoprefixer
 
-## Getting Started
+## Project Setup
 
 Install dependencies:
 
@@ -28,6 +28,8 @@ The app runs at:
 ```text
 http://127.0.0.1:5173/
 ```
+
+If port `5173` is already in use, Vite will print the next available local URL.
 
 ## Scripts
 
@@ -95,3 +97,9 @@ The app has been tuned for:
 - 1024px laptop applicants and landing layouts
 
 When changing layout behavior, verify the app at these widths before shipping.
+
+## Known Issues / Limitations
+
+- The app uses mock/static data for applicants, pricing, categories, and common questions.
+- Routing is handled client-side, so Vercel needs the included `vercel.json` rewrite for direct URLs like `/application`.
+- Lighthouse scores can vary by device, network throttling, browser extensions, and whether the latest deployment is live.

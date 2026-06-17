@@ -64,6 +64,11 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .below-fold-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
+  }
 }
 
 @media (max-height: 960px) {

@@ -3,7 +3,7 @@ import { Logo } from "../common/Logo";
 
 export function SupportCta() {
   return (
-    <section className="relative overflow-hidden bg-[#ECF2FF]">
+    <section className="below-fold-section relative overflow-hidden bg-[#ECF2FF]">
       <div className="absolute -right-24 -top-32 h-80 w-80 rounded-full bg-white/35 sm:h-[520px] sm:w-[520px]" />
       <div className="absolute left-1/2 top-8 h-8 w-8 -translate-x-1/2 rounded-full bg-[#FFC928] sm:top-10 sm:h-10 sm:w-10" />
       <div className="container-page grid min-h-[430px] items-center gap-6 py-10 sm:gap-10 sm:py-12 xl:grid-cols-[1.05fr_0.95fr] xl:py-0">
@@ -127,7 +127,10 @@ function DashboardMockup() {
               )
             )}
           </div>
-          <button className="mt-7 rounded-md bg-brand-800 px-5 py-3 text-[10px] font-extrabold text-white">
+          <button
+            type="button"
+            className="mt-7 rounded-md bg-brand-800 px-5 py-3 text-[10px] font-extrabold text-white"
+          >
             Apply All
           </button>
         </aside>

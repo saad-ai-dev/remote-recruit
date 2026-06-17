@@ -28,6 +28,8 @@ export function ApplicantPanel() {
 function SelectPill({ label, wide = false }) {
   return (
     <button
+      type="button"
+      aria-label={`Select ${label}`}
       className={`inline-flex h-9 items-center justify-center gap-2 rounded-lg bg-[#F7F7FA] px-3 text-xs font-medium text-brand-800 sm:h-10 sm:gap-3 sm:px-4 sm:text-sm ${
         wide ? "min-w-[76px] sm:min-w-[110px]" : "min-w-[68px] sm:min-w-[72px]"
       }`}
@@ -51,6 +53,7 @@ function ApplicantCard({ applicant }) {
         <div className="absolute inset-y-0 left-[28%] right-[28%] bg-[linear-gradient(180deg,rgba(64,89,115,0.75),rgba(25,39,58,0.9)),radial-gradient(circle_at_50%_20%,#c89186_0_12%,transparent_13%),linear-gradient(90deg,#264462,#456887)]" />
         <div className="absolute inset-0 bg-black/25" />
         <button
+          type="button"
           className="absolute left-1/2 top-1/2 grid h-8 w-8 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-lg bg-white/40 text-xs text-white backdrop-blur-sm sm:h-12 sm:w-12 sm:rounded-xl sm:text-base"
           aria-label="Play cover letter video"
         >
@@ -87,10 +90,16 @@ function ApplicantCard({ applicant }) {
         ))}
       </div>
       <div className="mt-2 grid min-w-0 grid-cols-2 gap-1.5 sm:mt-3 sm:gap-4">
-        <button className="min-w-0 rounded bg-[#31C737] py-1.5 text-[8px] font-extrabold text-white sm:rounded-md sm:py-2 sm:text-sm">
+        <button
+          type="button"
+          className="min-w-0 rounded bg-[#31C737] py-1.5 text-[8px] font-extrabold text-white sm:rounded-md sm:py-2 sm:text-sm"
+        >
           ✓ Shortlist
         </button>
-        <button className="min-w-0 rounded bg-[#D43D3D] py-1.5 text-[8px] font-extrabold text-white sm:rounded-md sm:py-2 sm:text-sm">
+        <button
+          type="button"
+          className="min-w-0 rounded bg-[#D43D3D] py-1.5 text-[8px] font-extrabold text-white sm:rounded-md sm:py-2 sm:text-sm"
+        >
           × Reject
         </button>
       </div>
@@ -105,6 +114,8 @@ function Pagination() {
     <nav className="mt-9 flex justify-center gap-2" aria-label="Pagination">
       {pages.map((page) => (
         <button
+          type="button"
+          aria-label={getPageLabel(page)}
           className={`grid h-9 min-w-9 place-items-center rounded-lg border border-[#DAE2F4] px-3 text-sm font-extrabold ${
             page === "2" ? "bg-brand-400 text-white" : "bg-white text-ink"
           }`}
@@ -115,4 +126,12 @@ function Pagination() {
       ))}
     </nav>
   );
+}
+
+function getPageLabel(page) {
+  if (page === "‹") return "Go to previous page";
+  if (page === "›") return "Go to next page";
+  if (page === "...") return "More pages";
+
+  return `Go to page ${page}`;
 }

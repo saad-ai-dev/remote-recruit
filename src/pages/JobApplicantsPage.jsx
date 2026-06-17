@@ -14,7 +14,10 @@ export function JobApplicantsPage() {
         <DashboardSidebar />
         <section className="min-w-0 flex-1 px-4 pb-24 pt-6 sm:px-7 sm:pt-7 lg:px-8 lg:pb-10 lg:pt-12 xl:px-16">
           <div className="mx-auto max-w-[1080px] xl:max-w-[1140px]">
-            <button className="mb-5 inline-flex items-center gap-2 rounded-md bg-brand-800 px-4 py-2 text-xs font-bold text-white lg:hidden">
+            <button
+              type="button"
+              className="mb-5 inline-flex items-center gap-2 rounded-md bg-brand-800 px-4 py-2 text-xs font-bold text-white lg:hidden"
+            >
               <span aria-hidden="true">←</span>
               Back
             </button>

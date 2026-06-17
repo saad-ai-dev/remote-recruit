@@ -38,13 +38,16 @@ export function FilterPanel() {
       </div>
       <PremiumSlider label="English Proficiency" />
       <PremiumSlider label="Experience Match" />
-      <button className="mt-5 w-full rounded-lg bg-[#FFC315] px-4 py-3 text-sm font-extrabold">
+      <button
+        type="button"
+        className="mt-5 w-full rounded-lg bg-[#FFC315] px-4 py-3 text-sm font-extrabold"
+      >
         Customize Ranking Filter
       </button>
       <a href="#why" className="mt-6 block text-[#F4AD00]">
         Why AI Ranking?
       </a>
-      <button className="mt-9 text-base font-bold text-[#D43D3D]">
+      <button type="button" className="mt-9 text-base font-bold text-[#D43D3D]">
         Reset all filters
       </button>
     </aside>
@@ -66,6 +69,12 @@ function FilterGroup({ title, children }) {
 function CheckField({ label, checked = false }) {
   return (
     <label className="flex items-center gap-3 text-sm text-muted">
+      <input
+        type="checkbox"
+        defaultChecked={checked}
+        className="sr-only"
+        aria-label={label}
+      />
       <span
         className={`grid h-5 w-5 place-items-center rounded border ${
           checked

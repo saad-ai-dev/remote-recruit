@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #11142d;
+    background: #ffffff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: theme("fontFamily.sans");
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full bg-brand-100 px-4 py-2 text-[11px] font-bold leading-none text-brand-700;
+  }
+
+  .body-copy {
+    @apply text-sm leading-7 text-muted sm:text-base;
+  }
+
+  .dashboard-sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+  }
+
+  .dashboard-sidebar-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dashboard-sidebar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-height: 960px) {
+  .dashboard-sidebar-scroll {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
